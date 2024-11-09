@@ -1,0 +1,36 @@
+# Entornos virtuales
+venv/
+.env/
+*.env
+
+# Archivos de configuración y credenciales
+*.secret
+instance/
+
+# Archivos de compilación de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyo
+*.pyd
+
+# Archivos de log
+*.log
+
+# Dependencias
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Configuración de IDEs y editores (opcional)
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
