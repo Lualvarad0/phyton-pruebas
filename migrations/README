@@ -1,0 +1,27 @@
+# Proyecto: Detección de Enfermedades en Frutas 🍎🍊
+
+Este es un proyecto para la **Detección de Enfermedades en Frutas** utilizando técnicas de aprendizaje automático y procesamiento de imágenes. El objetivo es poder detectar enfermedades comunes en frutas mediante la carga de imágenes y su posterior análisis.
+
+---
+
+## 🛠 Requisitos Previos
+
+Antes de empezar, asegúrate de tener lo siguiente:
+
+- **Python 3.7+** instalado.
+- **pip** para la instalación de dependencias.
+- **Virtualenv** para crear un entorno aislado.
+
+---
+
+## ⚡ Pasos para abrir y configurar el proyecto
+
+Sigue estos pasos para poner en marcha el proyecto en tu máquina local.
+
+### 1. Clonar el Repositorio
+
+Clona este repositorio en tu máquina local utilizando el siguiente comando:
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd <nombre_del_directorio_del_repositorio>

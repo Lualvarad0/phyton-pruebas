@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Detección de Enfermedades en Frutas{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJt3W9H2v4g9d3XkLO7z6P6dZGTk1atPrzP7Fxu2BrT6g7ddBd1FqgOaQkTp" crossorigin="anonymous">
+
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            padding-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .message-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .message-box li {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            color: #6c757d;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barra de navegación común para todas las páginas -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('routes.index') }}">Detección de Enfermedades en Frutas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('routes.upload') }}">Subir una imagen</a>
+                    </li>
+                    <!-- Agregar más enlaces si es necesario -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Contenido específico de cada página -->
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <!-- Mostrar mensajes flash -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="container">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <ul class="message-box">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Pie de página común para todas las páginas -->
+    <footer class="text-center p-3">
+        <p>&copy; 2024 Detección de Enfermedades en Frutas</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0dK1dB4WXe4tTVkW5bBsYPtTlk6BYwzD4zUQjbZlJMI6rE3b"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0dK1dB4WXe4tTVkW5bBsYPtTlk6BYwzD4zUQjbZlJMI6rE3b"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
